@@ -23,5 +23,8 @@
     <ClInclude Include="DatabaseHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TableHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
