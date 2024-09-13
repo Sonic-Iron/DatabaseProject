@@ -1,15 +1,23 @@
 #pragma once
 
 
-class table
+class Table : Database
 {
 private:
 
 public:
-	table(std::string PKname);
-	static table CreateTable(std::vector<std::string> entrytypes);
+	Table(std::string PKname);
+	using Database::GetDirectory;
+	
+	std::string GetDirectory(Table& table);
+	
+	static Table CreateTable(std::vector<std::string> entrytypes);
+
 
 	//CRUD
 
-	void CreateEntry();
+	bool CreateEntry();
+	bool ReadEntry();
+	bool UpdateEntry();
+	bool DeleteEntry();
 };

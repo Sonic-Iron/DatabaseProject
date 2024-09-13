@@ -8,7 +8,7 @@ class Database
 public:
 	Database(std::string dbname, std::string path);
 
-	std::string GetDirectory();
+	std::string GetDirectory(Database& db);
 
 	//Static so it can be called without an class memeber being created
 	static std::string BASEPATH;

@@ -13,7 +13,7 @@ Database::Database(std::string name, std::string path)
 
 }
 
-table::table(std::string PKname)
+Table::Table(std::string PKname)
 {
 
 }
@@ -32,12 +32,17 @@ Database Database::CreateEmptyDatabase(std::string dbfilename)
 	return Database(dbfilename, dbfilepath);
 }
 
-std::string Database::GetDirectory()
+Table Table::CreateTable(std::vector<std::string> entrytypes) //add in databasekey when decided
 {
 
 }
 
-table table::CreateTable(std::vector<std::string> entrytypes)
+
+std::string Database::GetDirectory(Database& db)
+{
+
+}
+std::string Table::GetDirectory(Table& table)
 {
 
 }
