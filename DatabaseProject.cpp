@@ -31,13 +31,15 @@ Database Database::CreateEmptyDatabase(std::string dbfilename)
 	}
 	return Database(dbfilename, dbfilepath);
 }
-
-Table Table::CreateTable(std::vector<std::string> entrytypes) //add in databasekey when decided
+Database Database::LoadDatabase(std::string databaseloc)
 {
 
 }
 
+Table Table::CreateTable(std::vector<std::string> entrytypes, std::vector<std::string> entrytypes) //add in databasekey when decided
+{
 
+}
 std::string Database::GetDirectory(Database& db)
 {
 
