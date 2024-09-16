@@ -7,13 +7,17 @@
 #include "DatabaseHeader.h"
 #include "TableHeader.h"
 namespace fs = std::experimental::filesystem;
+Database::Database()
+{
+	BASEPATH = "./DATABASEPROJECT"; //why does this work and not 'BASEPATH {"./DATABASEPROJECT"}' ?
+}
+
 Database::Database(std::string name, std::string path)
 {
 	BASEPATH = "./DATABASEPROJECT"; //why does this work and not 'BASEPATH {"./DATABASEPROJECT"}' ?
-
 }
 
-Table::Table(std::string PKname)
+Table::Table(std::vector<std::string> entrynames, std::vector<std::string> types)
 {
 
 }
@@ -36,15 +40,12 @@ Database Database::LoadDatabase(std::string databaseloc)
 
 }
 
-Table Table::CreateTable(std::vector<std::string> entrytypes, std::vector<std::string> entrytypes) //add in databasekey when decided
+bool Database::SaveDatabase()
 {
-
+	return false;
 }
-std::string Database::GetDirectory(Database& db)
-{
 
-}
-std::string Table::GetDirectory(Table& table)
+std::string Database::GetDirectoryPath()
 {
 
 }

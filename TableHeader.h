@@ -1,6 +1,5 @@
 #pragma once
 #include <experimental/filesystem>
-#include <variant>
 //data types:
 // numbers?
 // words?
@@ -10,16 +9,14 @@
 
 class Table : Database
 {
-private:s
-	std::vector<
+private:
+	std::
 
 public:
-	Table(std::string PKname);
-
 	using Database::GetDirectory;
 	std::string GetDirectory(Table& table);
 	
-	static Table CreateTable(std::vector<std::string> entrynames, std::vector<std::string> types);
+	Table(std::vector<std::string> entrynames, std::vector<std::string> types);
 	//CRUD
 
 	bool CreateEntry();
