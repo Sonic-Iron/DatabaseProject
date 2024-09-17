@@ -1,5 +1,6 @@
 #pragma once
 #include <experimental/filesystem>
+#include "DatabaseHeader.h"
 //data types:
 // numbers?
 // words?
@@ -10,17 +11,17 @@
 class Table : Database
 {
 private:
-	std::
 
 public:
-	using Database::GetDirectory;
-	std::string GetDirectory(Table& table);
-	
-	Table(std::vector<std::string> entrynames, std::vector<std::string> types);
+	std::vector<std::pair<char, std::string>> Header;
+	Table();
+	bool AddtoHeader();
 	//CRUD
 
 	bool CreateEntry();
 	bool ReadEntry();
 	bool UpdateEntry();
 	bool DeleteEntry();
+
+	bool UpdateType();
 };

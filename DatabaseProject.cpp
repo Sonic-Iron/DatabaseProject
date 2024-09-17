@@ -4,23 +4,28 @@
 #include <iostream>
 #include <fstream>
 #include <experimental/filesystem>
-#include "DatabaseHeader.h"
 #include "TableHeader.h"
 namespace fs = std::experimental::filesystem;
 Database::Database()
 {
-	BASEPATH = "./DATABASEPROJECT"; //why does this work and not 'BASEPATH {"./DATABASEPROJECT"}' ?
+	BASEPATH = "./DATABASEPROJECT";
 }
-
-Database::Database(std::string name, std::string path)
+Database::Database(std::string dbfilename, std::string dbfilepath)
 {
 	BASEPATH = "./DATABASEPROJECT"; //why does this work and not 'BASEPATH {"./DATABASEPROJECT"}' ?
 }
 
-Table::Table(std::vector<std::string> entrynames, std::vector<std::string> types)
-{
+Table::Table(){}
 
+Table Database::CreateTable(std::vector<std::pair<char, std::string>> HeaderDef)
+{
+	Table newtable = Table(); // do i need the '= Table()'
+	for (std::pair<char, std::string> entry : HeaderDef)
+	{
+
+	}
 }
+
 
 Database Database::CreateEmptyDatabase(std::string dbfilename)
 {
@@ -45,7 +50,7 @@ bool Database::SaveDatabase()
 	return false;
 }
 
-std::string Database::GetDirectoryPath()
+std::string Database::GetDBPath()
 {
 
 }
